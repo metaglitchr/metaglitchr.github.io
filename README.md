@@ -11,6 +11,5 @@
 
 [^1]:	metaglitchr
 
-\secure https://www.metaglitchr.com
 
 #web3 #innatetech #metaglitchr #notloc #yng3 #M00N #P0D #metaglitchr.com# #yng3.digital#
