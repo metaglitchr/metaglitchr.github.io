@@ -1,80 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>metaglitchr</title>
-    <style>
-      /* CSS for glitch animation */
-      @keyframes glitch {
-        0% {
-          transform: none;
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        2% {
-          transform: skew(-5deg);
-          opacity: 0.75;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        4% {
-          transform: none;
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        5% {
-          transform: skew(5deg);
-          opacity: 0.75;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        94% {
-          transform: none;
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        96% {
-          transform: skew(-5deg);
-          opacity: 0.75;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        98% {
-          transform: none;
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        99% {
-          transform: skew(5deg);
-          opacity: 0.75;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-        100% {
-          transform: none;
-          opacity: 1;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        }
-      }
-      /* CSS for title and text */
-      body {
-        background-color: #000;
-        color: #0ff;
-        font-family: monospace;
-        font-size: 16px;
-        overflow: hidden;
-      }
-      h1 {
-        font-size: 72px;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 200px;
-        animation: glitch 1s infinite linear alternate-reverse;
-      }
-      p {
-        margin: 0 auto;
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>metaglitchr</h1>
-    <p>Under construction</p>
-  </body>
+<head>
+	<title>Metaglitchr</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			background-color: #111;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 18px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			user-select: none;
+		}
+
+		h1 {
+			color: #ff00ff;
+			font-size: 64px;
+			margin-top: 10%;
+			text-align: center;
+			text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
+		}
+
+		section {
+			height: 100vh;
+			position: relative;
+		}
+
+		section:before {
+			background: linear-gradient(to right, #111 50%, #222 50%);
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			animation: glitch 1s linear infinite;
+			transform-origin: left;
+			z-index: -1;
+		}
+
+		section:after {
+			background: linear-gradient(to right, #222 50%, #111 50%);
+			content: "";
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			animation: glitch 1s linear infinite;
+			transform-origin: right;
+			z-index: -1;
+		}
+
+		@keyframes glitch {
+			0% {
+				transform: translate(0);
+			}
+
+			20% {
+				transform: translate(-5px, 5px);
+			}
+
+			40% {
+				transform: translate(-5px, -5px);
+			}
+
+			60% {
+				transform: translate(5px, 5px);
+			}
+
+			80% {
+				transform: translate(5px, -5px);
+			}
+
+			100% {
+				transform: translate(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h1>Metaglitchr</h1>
+	</section>
+</body>
 </html>
