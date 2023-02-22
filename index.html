@@ -1,75 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>metaglitchr</title>
-    <style>
-      body {
-        background-color: black;
-        color: white;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 3em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .glitch {
-        position: relative;
-        animation: glitch-animation 3s linear infinite;
-      }
-
-      .glitch:before {
-        content: 'metaglitchr';
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: purple;
-        clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-        background-color: cyan;
-        transform: translate(-2px, -2px);
-        z-index: -1;
-      }
-
-      .glitch:after {
-        content: 'metaglitchr';
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: cyan;
-        clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
-        background-color: purple;
-        transform: translate(2px, 2px);
-        z-index: -1;
-      }
-
-      @keyframes glitch-animation {
-        0% {
-          clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-        }
-        20% {
-          clip-path: polygon(0 10%, 100% 10%, 100% 43%, 0 43%);
-        }
-        40% {
-          clip-path: polygon(0 20%, 100% 20%, 100% 53%, 0 53%);
-        }
-        60% {
-          clip-path: polygon(0 30%, 100% 30%, 100% 63%, 0 63%);
-        }
-        80% {
-          clip-path: polygon(0 40%, 100% 40%, 100% 73%, 0 73%);
-        }
-        100% {
-          clip-path: polygon(0 50%, 100% 50%, 100% 83%, 0 83%);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="glitch"></div>
-  </body>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>metaglitchr</h1>
+    </div>
+</body>
 </html>
