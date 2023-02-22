@@ -1,91 +1,79 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>metaglitchr</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		body {
-			background-color: #111;
-			color: #fff;
-			font-family: Arial, sans-serif;
-			font-size: 18px;
-			line-height: 1.5;
-			margin: 0;
-			padding: 0;
-			overflow: hidden;
-			user-select: none;
-		}
+  <head>
+    <meta charset="utf-8">
+    <title>metaglitchr</title>
+    <style>
+      body {
+        background-color: #232323;
+        overflow: hidden;
+      }
 
-		h1 {
-			color: #ff00ff;
-			font-size: 64px;
-			margin-top: 10%;
-			text-align: center;
-			text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
-		}
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
 
-		section {
-			height: 100vh;
-			position: relative;
-		}
+      h1 {
+        color: #ff00ff;
+        font-size: 48px;
+        margin-top: 50px;
+        text-align: center;
+        text-shadow: 2px 2px #00ffff;
+      }
 
-		section:before {
-			background: linear-gradient(to right, #111 50%, #222 50%);
-			content: "";
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			animation: glitch 1s linear infinite;
-			transform-origin: left;
-			z-index: -1;
-		}
+      p {
+        color: #00ffff;
+        font-size: 24px;
+        margin: 30px auto;
+        max-width: 800px;
+        text-align: center;
+        text-shadow: 2px 2px #ff00ff;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <h1>metaglitchr</h1>
+    <p>Welcome to the dimension where cyberspace meets the universe.</p>
 
-		section:after {
-			background: linear-gradient(to right, #222 50%, #111 50%);
-			content: "";
-			height: 100%;
-			left: 0;
-			position: absolute;
-			top: 0;
-			width: 100%;
-			animation: glitch 1s linear infinite;
-			transform-origin: right;
-			z-index: -1;
-		}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+    <script>
+      let glitchyImage;
 
-		@keyframes glitch {
-			0% {
-				transform: translate(0);
-			}
+      function preload() {
+        glitchyImage = loadImage('https://via.placeholder.com/800x600.png?text=glitchy+image');
+      }
 
-			20% {
-				transform: translate(-5px, 5px);
-			}
+      function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(35);
 
-			40% {
-				transform: translate(-5px, -5px);
-			}
+        let glitchySound = loadSound('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', soundLoaded);
+        glitchySound.setLoop(true);
 
-			60% {
-				transform: translate(5px, 5px);
-			}
+        function soundLoaded() {
+          glitchySound.play();
+        }
+      }
 
-			80% {
-				transform: translate(5px, -5px);
-			}
+      function draw() {
+        background(35);
 
-			100% {
-				transform: translate(0);
-			}
-		}
-	</style>
-</head>
-<body>
-	<section>
-		<h1>metaglitchr</h1>
-	</section>
-</body>
+        for (let i = 0; i < 50; i++) {
+          let x = random(width);
+          let y = random(height);
+          let size = random(5, 50);
+          fill(255, 0, 255, random(100, 200));
+          noStroke();
+          ellipse(x, y, size, size);
+        }
+
+        image(glitchyImage, 0, 0, width, height);
+      }
+    </script>
+  </body>
 </html>
