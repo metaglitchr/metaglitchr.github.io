@@ -1,40 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>metaglitchr</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url("https://media.giphy.com/media/dZG5FKAkGY2yJTPOeo/giphy.gif");
-      background-size: cover;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-    }
+	<meta charset="utf-8">
+	<title>Metaglitchr</title>
+	<style>
+		body {
+			background-image: url('https://media.giphy.com/media/dZG5FKAkGY2yJTPOeo/giphy.gif');
+			background-size: cover;
+			background-position: center;
+			font-family: 'Press Start 2P', cursive;
+			color: white;
+			font-size: 24px;
+			text-align: center;
+			padding-top: 50px;
+		}
 
-    #title {
-      font-size: 4rem;
-      text-align: center;
-      margin-top: 25vh;
-      text-shadow: 2px 2px #8000ff;
-    }
+		h1 {
+			font-size: 80px;
+			margin-top: 0;
+			margin-bottom: 50px;
+			color: #E500FF;
+			text-shadow: 0 0 20px #E500FF;
+			animation: glitch 2s infinite;
+		}
 
-    #description {
-      font-size: 2rem;
-      text-align: center;
-      margin-top: 5vh;
-      text-shadow: 2px 2px #008080;
-    }
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		@keyframes glitch {
+			0% {
+				transform: none;
+				color: #E500FF;
+				text-shadow: 0 0 20px #E500FF;
+			}
+			20% {
+				transform: skew(0.5deg, -0.9deg);
+				color: #0AFF02;
+				text-shadow: 0 0 20px #0AFF02;
+			}
+			40% {
+				transform: skew(-1deg, 0.2deg);
+				color: #00FFFF;
+				text-shadow: 0 0 20px #00FFFF;
+			}
+			60% {
+				transform: translate(-2px, 0);
+				color: #FFFFFF;
+				text-shadow: 0 0 20px #FFFFFF;
+			}
+			80% {
+				transform: skew(0.8deg, 0.4deg);
+				color: #FF00F7;
+				text-shadow: 0 0 20px #FF00F7;
+			}
+			100% {
+				transform: none;
+				color: #E500FF;
+				text-shadow: 0 0 20px #E500FF;
+			}
+		}
+
+		a {
+			color: #00FFFF;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #0AFF02;
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
-  <div id="title">
-    metaglitchr
-  </div>
-  <div id="description">
-    A place where glitch meets reality
-  </div>
+	<h1>metaglitchr</h1>
+	<a href="https://github.com/metaglitchr">Visit Metaglitchr on Github</a>
 </body>
 </html>
