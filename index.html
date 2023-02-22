@@ -1,79 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>metaglitchr</title>
-    <style>
-      body {
-        background-color: #232323;
-        overflow: hidden;
-      }
-
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
-
-      h1 {
-        color: #ff00ff;
-        font-size: 48px;
-        margin-top: 50px;
-        text-align: center;
-        text-shadow: 2px 2px #00ffff;
-      }
-
-      p {
-        color: #00ffff;
-        font-size: 24px;
-        margin: 30px auto;
-        max-width: 800px;
-        text-align: center;
-        text-shadow: 2px 2px #ff00ff;
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="canvas"></canvas>
-    <h1>metaglitchr</h1>
-    <p>Welcome to the dimension where cyberspace meets the universe.</p>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-    <script>
-      let glitchyImage;
-
-      function preload() {
-        glitchyImage = loadImage('https://via.placeholder.com/800x600.png?text=glitchy+image');
-      }
-
-      function setup() {
-        createCanvas(windowWidth, windowHeight);
-        background(35);
-
-        let glitchySound = loadSound('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', soundLoaded);
-        glitchySound.setLoop(true);
-
-        function soundLoaded() {
-          glitchySound.play();
-        }
-      }
-
-      function draw() {
-        background(35);
-
-        for (let i = 0; i < 50; i++) {
-          let x = random(width);
-          let y = random(height);
-          let size = random(5, 50);
-          fill(255, 0, 255, random(100, 200));
-          noStroke();
-          ellipse(x, y, size, size);
-        }
-
-        image(glitchyImage, 0, 0, width, height);
-      }
-    </script>
-  </body>
+<head>
+	<meta charset="UTF-8">
+	<title>metaglitchr</title>
+	<style>
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: #333333;
+			overflow: hidden;
+			background-image: url("https://media.giphy.com/media/l4FGtULIKcSg9p1uo/giphy.gif");
+			background-repeat: repeat;
+			background-size: 100%;
+		}
+		h1 {
+			color: #FF00FF;
+			font-family: 'Press Start 2P', cursive;
+			font-size: 70px;
+			margin: 0;
+			text-shadow: 5px 5px #00FFFF;
+		}
+		h2 {
+			color: #00FFFF;
+			font-size: 40px;
+			margin: 0;
+			text-shadow: 2px 2px #FF00FF;
+		}
+		p {
+			color: #FFFFFF;
+			font-size: 20px;
+			margin: 0;
+			text-shadow: 1px 1px #00FFFF;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>metaglitchr</h1>
+		<h2>Bringing Cyberspace to the Universe</h2>
+		<p>Get ready to experience the digital dimension like never before.</p>
+		<p>Sign up for email notifications to stay updated on our latest projects and events:</p>
+		<form action="https://formspree.io/f/mnqlnyew" method="POST">
+			<input type="email" name="_replyto" placeholder="Your Email">
+			<input type="submit" value="Subscribe">
+		</form>
+	</div>
+</body>
 </html>
