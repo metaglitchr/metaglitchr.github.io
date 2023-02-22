@@ -1,75 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Metaglitchr</title>
-	<style>
-		body {
-			background-image: url('https://media.giphy.com/media/dZG5FKAkGY2yJTPOeo/giphy.gif');
-			background-size: cover;
-			background-position: center;
-			font-family: 'Press Start 2P', cursive;
-			color: white;
-			font-size: 24px;
-			text-align: center;
-			padding-top: 50px;
-		}
+  <head>
+    <title>metaglitchr</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://media.giphy.com/media/dZG5FKAkGY2yJTPOeo/giphy.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 
-		h1 {
-			font-size: 80px;
-			margin-top: 0;
-			margin-bottom: 50px;
-			color: #E500FF;
-			text-shadow: 0 0 20px #E500FF;
-			animation: glitch 2s infinite;
-		}
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #fff;
+        font-family: 'Press Start 2P', cursive;
+      }
 
-		@keyframes glitch {
-			0% {
-				transform: none;
-				color: #E500FF;
-				text-shadow: 0 0 20px #E500FF;
-			}
-			20% {
-				transform: skew(0.5deg, -0.9deg);
-				color: #0AFF02;
-				text-shadow: 0 0 20px #0AFF02;
-			}
-			40% {
-				transform: skew(-1deg, 0.2deg);
-				color: #00FFFF;
-				text-shadow: 0 0 20px #00FFFF;
-			}
-			60% {
-				transform: translate(-2px, 0);
-				color: #FFFFFF;
-				text-shadow: 0 0 20px #FFFFFF;
-			}
-			80% {
-				transform: skew(0.8deg, 0.4deg);
-				color: #FF00F7;
-				text-shadow: 0 0 20px #FF00F7;
-			}
-			100% {
-				transform: none;
-				color: #E500FF;
-				text-shadow: 0 0 20px #E500FF;
-			}
-		}
+      h1 {
+        font-size: 6rem;
+        margin: 0;
+        text-align: center;
+        text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 40px #0ff, 0px 0px 80px #0ff, 0px 0px 120px #0ff, 0px 0px 200px #0ff, 0px 0px 300px #0ff;
+      }
 
-		a {
-			color: #00FFFF;
-			text-decoration: none;
-		}
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+        border: 2px solid #fff;
+        padding: 10px 20px;
+        margin-top: 30px;
+        transition: all 0.3s ease-in-out;
+      }
 
-		a:hover {
-			color: #0AFF02;
-			text-decoration: underline;
-		}
-	</style>
-</head>
-<body>
-	<h1>metaglitchr</h1>
-	<a href="https://github.com/metaglitchr">Visit Metaglitchr on Github</a>
-</body>
+      a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>metaglitchr</h1>
+      <a href="#">Get the app</a>
+    </div>
+  </body>
 </html>
