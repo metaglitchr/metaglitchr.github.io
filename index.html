@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MetaGlitchr</title>
-    <style>
-      body {
-        background-image: url('https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy-downsized-large.gif');
-        background-size: cover;
-        font-family: 'Press Start 2P', cursive;
-      }
-      h1 {
-        font-size: 72px;
-        color: #ff00ff;
-        text-align: center;
-        margin-top: 100px;
-        text-shadow: 0px 0px 20px #00ffff, 0px 0px 20px #00ffff, 0px 0px 20px #00ffff;
-      }
-      p {
-        font-size: 24px;
-        color: #ffffff;
-        text-align: center;
-        text-shadow: 0px 0px 20px #00ffff, 0px 0px 20px #00ffff, 0px 0px 20px #00ffff;
-      }
-      a {
-        font-size: 24px;
-        color: #ffffff;
-        text-align: center;
-        text-shadow: 0px 0px 20px #00ffff, 0px 0px 20px #00ffff, 0px 0px 20px #00ffff;
-        display: block;
-        margin-top: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>metaglitchr</h1>
-    <p>Welcome to the future of glitch art</p>
-    <a href="#">Download the app now</a>
-  </body>
+<head>
+	<title>metaglitchr</title>
+	<style type="text/css">
+		body {
+			background-image: url('https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy-downsized-large.gif');
+			background-size: cover;
+			background-position: center;
+			color: #ffffff;
+			font-family: 'Press Start 2P', cursive;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-align: center;
+			text-shadow: 1px 1px 1px #000000;
+		}
+		h1 {
+			font-size: 48px;
+			margin-top: 20%;
+			text-transform: uppercase;
+			animation: glitch 2s infinite;
+		}
+		@keyframes glitch {
+		  0% {
+		    color: #ffffff;
+		    -webkit-text-stroke: 2px #000000;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		  20% {
+		    color: #00ff00;
+		    -webkit-text-stroke: 2px #ff0000;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		  40% {
+		    color: #ff0000;
+		    -webkit-text-stroke: 2px #00ff00;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		  60% {
+		    color: #00ffff;
+		    -webkit-text-stroke: 2px #ff00ff;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		  80% {
+		    color: #ff00ff;
+		    -webkit-text-stroke: 2px #00ffff;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		  100% {
+		    color: #ffffff;
+		    -webkit-text-stroke: 2px #000000;
+		    transform: skew(0deg);
+		    text-shadow: 1px 1px 1px #000000;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<h1>metaglitchr</h1>
+</body>
 </html>
