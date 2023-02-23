@@ -1,62 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>metaglitchr</title>
 	<style type="text/css">
 		body {
-			background-image: url('https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy-downsized-large.gif');
+			background-image: url("https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy-downsized-large.gif");
 			background-size: cover;
-			background-position: center;
-			color: #ffffff;
+			background-repeat: no-repeat;
+			color: #FFF;
 			font-family: 'Press Start 2P', cursive;
-			font-size: 16px;
-			letter-spacing: 1px;
-			text-align: center;
-			text-shadow: 1px 1px 1px #000000;
 		}
+
 		h1 {
-			font-size: 48px;
-			margin-top: 20%;
-			text-transform: uppercase;
-			animation: glitch 2s infinite;
+			font-size: 3rem;
+			text-align: center;
+			text-shadow: 2px 2px #000;
+			margin-top: 100px;
 		}
-		@keyframes glitch {
-		  0% {
-		    color: #ffffff;
-		    -webkit-text-stroke: 2px #000000;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
-		  20% {
-		    color: #00ff00;
-		    -webkit-text-stroke: 2px #ff0000;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
-		  40% {
-		    color: #ff0000;
-		    -webkit-text-stroke: 2px #00ff00;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
-		  60% {
-		    color: #00ffff;
-		    -webkit-text-stroke: 2px #ff00ff;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
-		  80% {
-		    color: #ff00ff;
-		    -webkit-text-stroke: 2px #00ffff;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
-		  100% {
-		    color: #ffffff;
-		    -webkit-text-stroke: 2px #000000;
-		    transform: skew(0deg);
-		    text-shadow: 1px 1px 1px #000000;
-		  }
+
+		p {
+			font-size: 2rem;
+			text-align: center;
+			text-shadow: 2px 2px #000;
+			margin-top: 50px;
+		}
+
+		a {
+			display: block;
+			font-size: 2rem;
+			text-align: center;
+			text-shadow: 2px 2px #000;
+			margin-top: 50px;
+			color: #FFF;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #00FF00;
 		}
 	</style>
 </head>
