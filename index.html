@@ -3,16 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>metaglitchr</title>
+  <script src="particles.js"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-image: url("https://media.giphy.com/media/gIODGWDBuG5AWlUExJ/giphy-downsized-large.gif");
-      background-size: cover;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-    }
-
     #title {
       font-size: 4rem;
       text-align: center;
@@ -53,6 +45,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="particles-js"></canvas>
+  <body>
+  <canvas id="particles-js"></canvas>
+  <script>
+    particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+      console.log('particles.js loaded - callback');
+    });
+  </script>
+  </body>
   <div id="title">
     metaglitchr
   </div>
